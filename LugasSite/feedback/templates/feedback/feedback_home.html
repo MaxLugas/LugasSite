@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}
+Feedbacks
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Feedbacks</h1>
+        {% if feedback %}
+            {% for el in feedback %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.name }}</h3>
+                    <p>{{ el.content }}</p>
+                    <a href="{% url 'feedback-detail' el.id %}" class="btn btn-warning">See more</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No records</p>
+        {% endif %}
+    </div>
+{% endblock %}

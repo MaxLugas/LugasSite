@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}
+{{ feedback.name }}
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ feedback.name }}</h1>
+        <p>{{ feedback.date }}</p>
+        <p>{{ feedback.content }}</p>
+        <p>{{ feedback.email }}</p>
+        <a href="{% url 'feedback_home' %}" class="btn btn-warning">Back</a>
+    </div>
+{% endblock %}
