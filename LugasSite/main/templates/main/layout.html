@@ -14,15 +14,15 @@
 <body>
     <aside>
         <img src="{% static 'main/img/LetterL.jpg' %}" alt="Logo">
-        <span class="logo">LugasSite</span>
+        <span class="logo">Maxim Lugovsky</span>
         <h3>Navigation</h3>
         <ul>
             <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Home</li></a>
             <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i> About me</li></a>
-            <a href="{% url 'news_home' %}"><li><i class="fas fa-newspaper"></i> News</li></a>
-            <a href=""><li><i class="fas fa-paper-plane"></i> Contacts</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fas fa-newspaper"></i> Projects</li></a>
+            <a href="{% url 'contacts' %}"><li><i class="fas fa-paper-plane"></i> Contacts</li></a>
             <a href="{% url 'feedback_home' %}"><li><i class="fas fa-clipboard"></i> Feedbacks</li></a>
-            <a href="{% url 'create_feedback' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Create feedback</button></li></a>
+            <a href="{% url 'create_feedback' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Send feedback</button></li></a>
             {# <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Create news</button></li></a> #}
         </ul>
     </aside>
