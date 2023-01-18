@@ -7,10 +7,16 @@ Feedback by {{ feedback.name }}
 
 {% block content %}
     <div class="features">
-        <h1>{{ feedback.name }}</h1>
-        <p>{{ feedback.date }}</p>
-        <p>{{ feedback.content }}</p>
-        <p>{{ feedback.email }}</p>
-        <a href="{% url 'feedback_home' %}" class="btn btn-warning">Back</a>
+        <div class="alert alert-warning">
+            <h1>{{ feedback.name }}</h1>
+            <hr>
+            <p>{{ feedback.date }}</p>
+            <hr>
+            <p>{{ feedback.content }}</p>
+            <hr>
+            <p>{{ feedback.email }}</p>
+            <hr>
+            <a href="{% url 'feedback_home' %}" class="btn btn-warning">Back</a>
+        </div>
     </div>
 {% endblock %}

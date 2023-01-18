@@ -6,12 +6,17 @@
 
 {% block content %}
     <div class="features">
-        <h1>{{ article.title }}</h1>
-        <p>{{ article.date }}</p>
-        <p>{{ article.content }}</p>
-        <a href="{% url 'news_home' %}" class="btn btn-warning">Back</a>
-        {# <a href="{% url 'news-delete' article.id %}" class="btn btn-danger">Delete</a> #}
-        {# <a href="{% url 'news-update' article.id %}" class="btn btn-info">Update</a> #}
+        <div class="alert alert-warning">
+            <h1>{{ article.title }}</h1>
+            <hr>
+            <p>{{ article.date }}</p>
+            <hr>
+            <p>{{ article.content }}</p>
+            <hr>
+            <a href="{% url 'news_home' %}" class="btn btn-warning">Back</a>
+            {# <a href="{% url 'news-delete' article.id %}" class="btn btn-danger">Delete</a> #}
+            {# <a href="{% url 'news-update' article.id %}" class="btn btn-info">Update</a> #}
+        </div>
     </div>
 
 {% endblock %}
