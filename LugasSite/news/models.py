@@ -5,7 +5,8 @@ class Articles(models.Model):
     title = models.CharField('Title', max_length=50)
     anons = models.CharField('Anons', max_length=250)
     content = models.TextField('Content')
-    date = models.DateTimeField('Date of publication')
+    date = models.DateField('Date of publication')
+    file = models.FileField(upload_to='', max_length=250, null=True, default=None, blank=True)
 
     def __str__(self):
         return self.title
