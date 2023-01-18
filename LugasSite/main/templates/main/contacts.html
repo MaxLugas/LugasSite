@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Contacts</h1>
+    <p>I am glad to see you on this page. If you want to contact me, then do it in any way convenient for you</p>
+
+    <button class="btn btn-warning"><i class="fas fa-envelope"></i><a href="mailto:maxim.lugovsky@gmail.com"
+                                                                      style="text-decoration: none; color: black">
+        Gmail</a></button>
+    <button class="btn btn-warning"><i class="fas fa-paper-plane"></i><a href="https://t.me/mxm_lugas"
+                                                                         style="text-decoration: none; color: black">
+        Telegram</a></button>
+    <button class="btn btn-warning"><i class="fab fa-linkedin"></i><a
+            href="https://www.linkedin.com/in/maxim-lugovsky-622696230/" style="text-decoration: none; color: black">
+        LinkedIn</a></button>
+    <button class="btn btn-warning"><i class="fab fa-github"></i><a href="https://github.com/MaxLugas"
+                                                                    style="text-decoration: none; color: black">
+        GitHub</a></button>
+    <button class="btn btn-warning"><i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=375291633171"
+                                                                    style="text-decoration: none; color: black">
+        WhatsApp</a></button>
+</div>
+{% endblock %}
