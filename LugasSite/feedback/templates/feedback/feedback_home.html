@@ -13,7 +13,7 @@ Feedbacks
                 <div class="alert alert-warning">
                     <h3>{{ el.name }}</h3>
                     <p>{{ el.content|safe|linebreaks|truncatewords:50 }}</p>
-                    <a href="{% url 'feedback-detail' el.id %}" class="btn btn-warning">See more</a>
+                    <a href="{% url 'feedback-detail' el.id %}" class="shine-button">See more</a>
                 </div>
             {% endfor %}
         {% else %}

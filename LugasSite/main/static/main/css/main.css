@@ -1,5 +1,7 @@
 body {
-    background: #2c2c2c;
+    background: rgb(0,35,255);
+    background: linear-gradient(90deg, rgba(0,35,255,1) 0%, rgba(3,0,255,0.9893207282913166) 30%, rgba(255,0,0,1) 100%);
+    font-family: 'Montserrat', sans-serif;
 }
 
 aside {
@@ -40,7 +42,7 @@ aside ul li {
 }
 
 aside ul li:hover, aside ul a:hover {
-    color: #eb5959;
+    color: #f25c5c;
     text_decoration: none;
     transform: scale(1.05);
 }
@@ -68,4 +70,96 @@ form {
     margin-left: 32%;
     width: 500px;
     margin-top: 50px;
+}
+
+.floating-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: white;
+  background: #181818;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+
+.floating-button:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: black;
+  transform: translateY(-7px);
+}
+
+.shine-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 120px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+
+.shine-button:hover {
+  background: linear-gradient(90deg, rgba(0,35,255,1) 0%, rgba(255,0,0,1) 100%);
+  color: white;
+}
+
+.pressed-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+
+.pressed-button:hover {
+  background: #2EE59D;
+  color: white;
+}
+
+.btn-info {
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 45px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background: rgb(42,51,165);
+    background: linear-gradient(90deg, rgba(42,51,165,1) 35%, rgba(249,249,249,1) 50%, rgba(250,0,0,1) 65%);
+}
+
+.btn-info:hover {
+  background: rgb(0,35,255);
+  background: linear-gradient(90deg, rgba(0,35,255,1) 0%, rgba(3,0,255,0.9893207282913166) 30%, rgba(255,0,0,1) 100%);
+  color: white;
 }
