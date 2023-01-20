@@ -9,15 +9,15 @@ class FeedbackForm(ModelForm):
         widgets = {
             'name': TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Your name'
+                'placeholder': 'Nickname'
             }),
             'email': EmailInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Your email'
+                'placeholder': 'Email'
             }),
             'content': Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Your feedback'
+                'placeholder': 'Feedback'
             }),
             'date': DateInput(attrs={
                 'class': 'form-control',

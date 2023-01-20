@@ -1,5 +1,5 @@
-{% load static %}
 <!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,9 +22,9 @@
             <a href="{% url 'news_home' %}"><li><i class="fas fa-newspaper"></i> Projects</li></a>
             <a href="{% url 'contacts' %}"><li><i class="fas fa-paper-plane"></i> Contacts</li></a>
             <a href="{% url 'feedback_home' %}"><li><i class="fas fa-clipboard"></i> Feedbacks</li></a>
-            <a href="{% url 'create_feedback' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Send feedback</button></li></a>
             {# <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Create news</button></li></a> #}
         </ul>
+        <a href="{% url 'create_feedback' %}"><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Send feedback</button></a>
     </aside>
     <main>
         {% block content %}
