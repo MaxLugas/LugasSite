@@ -12,9 +12,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
+<div class="block">
+    <a href="{% url 'sign_in' %}"><button class="login-button"> Sign in</button></a>
+    <a href="{% url 'register' %}"><button class="login-button"> Login in</button></a>
+</div>
     <aside>
         <img src="{% static 'main/img/LUGAS.png' %}" alt="Logo">
-        <span class="logo">Maxim Lugovsky</span>
+        <span class="logo">Max Lugas website</span>
         <h3>Navigation</h3>
         <ul>
             <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Home</li></a>

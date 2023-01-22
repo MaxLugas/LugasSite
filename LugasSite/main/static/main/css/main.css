@@ -6,11 +6,10 @@ body {
 
 aside {
     border-radius: 45px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 3%;
     float: left;
-    background: rgb(255,67,67);
-    background: linear-gradient(90deg, rgba(255,67,67,0.47951680672268904) 0%, rgba(34,139,18,1) 100%);
+    background-color: black;
     padding: 2%;
     position: fixed;
     color: #fff;
@@ -61,7 +60,7 @@ aside ul li:hover, aside ul a:hover {
 main .features {
     float: left;
     color: #fff;
-    margin-top: 50px;
+    margin-top: 15px;
     margin-left: 21%;
     text-align: center;
     width: 75%;
@@ -71,6 +70,10 @@ main .features h1 {font-size: 50px;}
 main .features p {max-width: 400px; margin: 20px auto;}
 
 .alert-warning {
+    background-color: black;
+    color: white;
+    border-radius: 45px;
+    padding: 2.5%;
     float: left;
     clear: both;
     width: 400px;
@@ -82,6 +85,7 @@ form {
     margin-left: 32%;
     width: 500px;
     margin-top: 50px;
+    color: white;
 }
 
 .floating-button {
@@ -138,7 +142,7 @@ form {
 .pressed-button {
   text-decoration: none;
   display: inline-block;
-  width: 140px;
+  width: 120px;
   height: 45px;
   line-height: 45px;
   border-radius: 45px;
@@ -179,3 +183,33 @@ form {
     background: linear-gradient(90deg, rgba(0,35,255,1) 0%, rgba(3,0,255,0.9893207282913166) 30%, rgba(255,0,0,1) 100%);
     color: white;
 }
+
+.login-button {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  width: 120px;
+  height: 50px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 15px;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: white;
+  background: #181818;
+  transition: .3s;
+}
+
+.login-button:hover {
+  background: #2EE59D;
+  color: black;
+  transform: scale(1.05);
+  transition: transform .6s ease;
+}
+
+
+div.block {text-align: right;}
+
+div.login {text-align: center}
