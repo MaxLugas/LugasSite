@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.forms import  TextInput, EmailInput, PasswordInput, CharField
 
@@ -30,3 +30,7 @@ class RegisterUserForm(UserCreationForm):
                 'placeholder': 'Confirm password'
             }),
         }
+
+class LoginUserForm(AuthenticationForm):
+    username = CharField(label='Username', widget=TextInput(attrs={'class': 'form-control'}))
+    password = CharField(label='Password', widget=PasswordInput(attrs={'class': 'form-control'}))

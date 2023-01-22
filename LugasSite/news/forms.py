@@ -5,7 +5,7 @@ from django.forms import ModelForm, TextInput, DateInput, Textarea, FileInput
 class ArticlesForm(ModelForm):
     class Meta:
         model = Articles
-        fields = ['title', 'anons', 'content', 'date', 'file']
+        fields = ['title', 'anons', 'content', 'file']
 
         widgets = {
             'title': TextInput(attrs={
@@ -15,10 +15,6 @@ class ArticlesForm(ModelForm):
             'anons': TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Anons'
-            }),
-            'date': DateInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Date'
             }),
             'content': Textarea(attrs={
                 'class': 'form-control',

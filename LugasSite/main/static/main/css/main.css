@@ -34,7 +34,7 @@ aside h3 {
     font-family: 'Times New Roman', sans-serif;
     margin-top: 50px;
     font-size: 28px;
-    margin-left: 22%;
+    margin-left: 34%;
 }
 
 aside ul {list-style: none}
@@ -42,6 +42,7 @@ aside ul {list-style: none}
 aside ul li {
     color: #fff;
     display: block;
+    text-decoration: none;
     margin-top: 20px;
     margin-left: 15%;
     transition: transform .6s ease;
@@ -52,8 +53,6 @@ aside ul li:hover, aside ul a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #2a33a5;
-
-    text_decoration: none;
     transform: scale(1.05);
 }
 
@@ -213,3 +212,14 @@ form {
 div.block {text-align: right;}
 
 div.login {text-align: center}
+
+.logon {
+    margin-top: 15px;
+    color: white;
+    padding: 5px;
+}
+
+.logon h1 {
+    text-align: center;
+    margin-right: 25px;
+}

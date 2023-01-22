@@ -13,13 +13,17 @@
 </head>
 <body>
 <div class="block">
-    <a href="{% url 'sign_in' %}"><button class="login-button"> Sign in</button></a>
-    <a href="{% url 'register' %}"><button class="login-button"> Login in</button></a>
+    {% if request.user.is_authenticated %}
+    {{ user.username }} <a href="{% url 'logout' %}"><button class="login-button"> Log out</button></a>
+    {% else %}
+        <a href="{% url 'sign_in' %}"><button class="login-button"> Sign in</button></a>
+        <a href="{% url 'register' %}"><button class="login-button"> Login in</button></a>
+    {% endif %}
 </div>
     <aside>
         <img src="{% static 'main/img/LUGAS.png' %}" alt="Logo">
         <span class="logo">Max Lugas website</span>
-        <h3>Navigation</h3>
+        <h3>Menu</h3>
         <ul>
             <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Home</li></a>
             <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i> About me</li></a>
@@ -28,7 +32,9 @@
             <a href="{% url 'feedback_home' %}"><li><i class="fas fa-clipboard"></i> Feedbacks</li></a>
             {# <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Create news</button></li></a> #}
         </ul>
+        {% if request.user.is_authenticated %}
         <a href="{% url 'create_feedback' %}"><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Send feedback</button></a>
+        {% endif %}
     </aside>
     <main>
         {% block content %}

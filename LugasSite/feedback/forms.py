@@ -4,7 +4,7 @@ from django.forms import ModelForm, TextInput, EmailInput, Textarea, DateInput
 class FeedbackForm(ModelForm):
     class Meta:
         model = Feedback
-        fields = ['name', 'email', 'content', 'date']
+        fields = ['name', 'email', 'content']
 
         widgets = {
             'name': TextInput(attrs={
@@ -18,9 +18,5 @@ class FeedbackForm(ModelForm):
             'content': Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Feedback'
-            }),
-            'date': DateInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Date'
             }),
         }
