@@ -95,6 +95,22 @@ main .features h2 {
     text-align: left;
 }
 
+.alert-warning a.github {
+    color: white;
+    display: block;
+    text-decoration: none;
+    transition: transform .6s ease;
+    text-align: center;
+}
+
+.alert-warning a.github:hover {
+    background: linear-gradient(45deg, #2a33a5 15%, #fa0000 75%, #8AA9D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #2a33a5;
+    transform: scale(1.05);
+}
+
 form {
     margin-left: 32%;
     width: 500px;

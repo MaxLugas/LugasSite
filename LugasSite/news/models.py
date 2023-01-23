@@ -6,7 +6,7 @@ class Articles(models.Model):
     anons = models.CharField('Anons', max_length=250)
     content = models.TextField('Content')
     date = models.DateField('Date of publication', auto_now_add=True)
-    file = models.FileField(upload_to='', max_length=250, null=True, default=None, blank=True)
+    link = models.URLField('Link to GitHub', default=None)
 
     def __str__(self):
         return self.title

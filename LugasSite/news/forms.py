@@ -1,11 +1,11 @@
 from .models import Articles
-from django.forms import ModelForm, TextInput, DateInput, Textarea, FileInput
+from django.forms import ModelForm, TextInput, Textarea
 
 
 class ArticlesForm(ModelForm):
     class Meta:
         model = Articles
-        fields = ['title', 'anons', 'content', 'file']
+        fields = ['title', 'anons', 'content', 'link']
 
         widgets = {
             'title': TextInput(attrs={
@@ -20,7 +20,7 @@ class ArticlesForm(ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Content'
             }),
-            'file': FileInput(attrs={
+            'link': TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'File'
             }),
