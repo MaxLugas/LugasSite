@@ -1,20 +1,27 @@
 {% extends 'main/layout.html' %}
 
 {% block title %}
-Form for creating news
+Form for creating project
 {% endblock %}
 
 {% block content %}
-    <div class="features">
-        <h1>Form for creating news</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.title }}<br>
-            {{ form.anons }}<br>
-            {{ form.content }}<br>
-            <span>{{ error }}</span>
-            <button class="btn btn-success" type="submit">Create</button>
-        </form>
-    </div>
-
+{% if request.user.is_authenticated %}
+    {% if user.is_superuser %}
+        <div class="features">
+            <h2>Form for creating project</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.title }}<br>
+                {{ form.anons }}<br>
+                {{ form.content }}<br>
+                <span>{{ error }}</span>
+                <button class="pressed-button" type="submit">Create</button>
+            </form>
+        </div>
+    {% else%}
+        <div class="features">
+            <p>Sorry, you are not admin</p>
+        </div>
+    {% endif %}
+{% endif %}
 {% endblock %}

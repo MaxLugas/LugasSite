@@ -8,16 +8,31 @@ Feedbacks
 {% block content %}
     <div class="features">
         <h1>Feedbacks</h1>
-        {% if feedback %}
-            {% for el in feedback %}
-                <div class="alert alert-warning">
-                    <h3>{{ el.name }}</h3>
-                    <p>{{ el.content|safe|linebreaks|truncatewords:50 }}</p>
-                    <a href="{% url 'feedback-detail' el.id %}" class="shine-button">See more</a>
-                </div>
-            {% endfor %}
+        {% if request.user.is_authenticated %}
+            {% if feedback %}
+                {% for el in feedback %}
+                    <div class="alert alert-warning">
+                        <h3>{{ el.name }}</h3>
+                        <p>{{ el.content|safe|linebreaks|truncatewords:50 }}</p>
+                        <a href="{% url 'feedback-detail' el.id %}" class="shine-button">See more</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No records</p>
+            {% endif %}
         {% else %}
-            <p>No records</p>
-        {% endif %}
+        <p>If you want to write feedback please sign in if you didn't do this early</p>
+            {% if feedback %}
+                    {% for el in feedback %}
+                        <div class="alert alert-warning">
+                            <h3>{{ el.name }}</h3>
+                            <p>{{ el.content|safe|linebreaks|truncatewords:50 }}</p>
+                            <a href="{% url 'feedback-detail' el.id %}" class="shine-button">See more</a>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No records</p>
+                {% endif %}
+            {% endif %}
     </div>
 {% endblock %}

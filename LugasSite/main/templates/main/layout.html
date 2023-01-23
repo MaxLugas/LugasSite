@@ -14,7 +14,7 @@
 <body>
 <div class="block">
     {% if request.user.is_authenticated %}
-    {{ user.username }} <a href="{% url 'logout' %}"><button class="login-button"> Log out</button></a>
+    <a href="{% url 'logout' %}"><button class="login-button"> Log out</button></a>
     {% else %}
         <a href="{% url 'sign_in' %}"><button class="login-button"> Sign in</button></a>
         <a href="{% url 'register' %}"><button class="login-button"> Login in</button></a>
@@ -23,17 +23,23 @@
     <aside>
         <img src="{% static 'main/img/LUGAS.png' %}" alt="Logo">
         <span class="logo">Max Lugas website</span>
-        <h3>Menu</h3>
+        {% if request.user.is_authenticated %}
+        <h6>Hello {{ user.username }}</h6>
+        {% endif %}
+        <h3>Navigation</h3>
         <ul>
             <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Home</li></a>
             <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i> About me</li></a>
             <a href="{% url 'news_home' %}"><li><i class="fas fa-newspaper"></i> Projects</li></a>
             <a href="{% url 'contacts' %}"><li><i class="fas fa-paper-plane"></i> Contacts</li></a>
             <a href="{% url 'feedback_home' %}"><li><i class="fas fa-clipboard"></i> Feedbacks</li></a>
-            {# <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Create news</button></li></a> #}
         </ul>
         {% if request.user.is_authenticated %}
-        <a href="{% url 'create_feedback' %}"><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Send feedback</button></a>
+            {% if user.is_superuser %}
+                <a href="{% url 'create' %}"><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Create project</button></a>
+            {% else %}
+                <a href="{% url 'create_feedback' %}"><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Send feedback</button></a>
+            {% endif%}
         {% endif %}
     </aside>
     <main>
