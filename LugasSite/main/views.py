@@ -38,3 +38,6 @@ class LoginUser(LoginView):
 def logout_user(request):
     logout(request)
     return redirect('home')
+
+def certificates(request):
+    return render(request, 'main/certificates.html')

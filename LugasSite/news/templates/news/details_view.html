@@ -16,14 +16,6 @@
             <p><a class="github" href="{{ article.link }}">{{ article.link }}</a></p>
             <hr>
             <a href="{% url 'news_home' %}" class="shine-button">Back</a>
-            {% if request.user.is_authenticated %}
-                {% if user.is_superuser %}
-                    <div class="admin">
-                        <a href="{% url 'news-delete' article.id %}" class="btn btn-info">Delete</a>
-                        <a href="{% url 'news-update' article.id %}" class="btn btn-info">Update</a>
-                    </div>
-                {% endif %}
-            {% endif %}
         </div>
     </div>
 

@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}
+Certificates
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>My certificates</h1><br>
+    <div class="certificates">
+        <h6>Stepik.org ("Python Generation": a course for beginners)</h6>
+        <p><a href="media/stepik-certificate.pdf"><img src='static/main/img/stepik-certificate.jpg'></a></p>
+        <p><a href="media/stepik-certificate.pdf" download><button class="pressed-button" type="submit">Download</button></a></p>
+        <h6>Stepik.org ("Python Generation": a course for advanced)</h6>
+        <p><a href="media/stepik-certificate-2.pdf"><img src='static/main/img/stepik-certificate-2.jpg'></a></p>
+        <p><a href="media/stepik-certificate-2.pdf" download><button class="pressed-button" type="submit">Download</button></a></p>
+    </div>
+</div>
+{% endblock %}

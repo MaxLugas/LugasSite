@@ -104,10 +104,7 @@ main .features h2 {
 }
 
 .alert-warning a.github:hover {
-    background: linear-gradient(45deg, #2a33a5 15%, #fa0000 75%, #8AA9D6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #2a33a5;
+    color: #2EE59D;
     transform: scale(1.05);
 }
 
@@ -285,4 +282,18 @@ div.login {text-align: center}
     text-decoration: none;
     margin: 15px;
     text-align: center;
+}
+
+.photo img {
+    border-radius: 45px;
+    padding: 5px;
+}
+
+.certificates h6 {
+    font-size: 28px;
+}
+
+.certificates img {
+    border-radius: 45px;
+    zoom: 0.2;
 }
